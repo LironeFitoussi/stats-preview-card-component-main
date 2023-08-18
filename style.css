@@ -14,14 +14,35 @@ body {
     height: 100vh;
 }
 
+p {
+    color: hsla(0, 0%, 100%, 0.6);
+}
 main {
     background-color: hsl(244, 38%, 16%);;
-    padding: 3%;
-    width: 60vw;
+    width: 70vw;
+    height: 40vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-radius: 1vh;
 }
+
+.text-content {
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.element-header {
+    margin: 0;
+    font-size: 3.75vh;
+}
+
+.element-header > span {
+    color: hsl(277, 64%, 61%);
+}
+
+
+
+
 /* Color Plaete */
 .black {
     /* - Very dark blue (main background) */
