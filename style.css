@@ -22,8 +22,8 @@ main {
     background-color: hsl(244, 38%, 16%);;
     width: 80vw;
     height: 50vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     border-radius: 1vh;
 }
 
@@ -82,6 +82,7 @@ main {
 
 .img {
     width: 100%;
+    height: 100%;
     border-radius: 0 1vh 1vh 0;
     background-image: url(./images/image-header-desktop.jpg);
     background-repeat: no-repeat;
@@ -89,7 +90,7 @@ main {
 }
 
 .color-filter {
-    background-color: hsla(277, 64%, 61%, 0.5);
+    background-color: hsla(285, 90%, 45%, 0.5);
 
     width: 100%;
     height: 100%;
@@ -124,4 +125,60 @@ main {
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 375px){
+    main {
+        height: 88.5vh;
+        width: 90%;
+        background-color: hsl(244, 38%, 16%);
+        border-radius: 1vh;
+        flex-direction: column-reverse;
+    }
+    
+    .text-content {
+        padding: 3vh;
+        align-items: center;
+        gap: 2vh;
+    }
+
+    .card-header {
+        text-align: center;
+        align-items: center;
+    }
+    .element-header {
+        font-size: 7vw;  
+        width: 70vw;  
+    }
+
+    .about-company {
+        font-size: 4vw;
+        width: 90%;
+        line-height: 2.5vh;
+    }
+
+    .achivments {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4vh;
+    }
+
+    .topic-element {
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+    }
+
+    .topic-element > h3 {
+        margin: 0;
+        font-size: 7vw;
+        font-weight: 600;
+    }
+
+    .img {
+        background-image: url(./images/image-header-mobile.jpg);
+        border-radius: 1vh 1vh 0 0;
+    }
 }
